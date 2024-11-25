@@ -52,7 +52,7 @@ function Contact() {
       <div className="flex items-center space-x-4 mb-6">
         <FaLinkedin className="text-blue-700 text-2xl" />
         <a
-          href="https://www.linkedin.com/in/mihnea-negru/"
+          href="https://www.linkedin.com/in/mihneanegru/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-lg text-blue-700 hover:underline"
