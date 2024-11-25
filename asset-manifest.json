@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MihneaVNegru/my-portfolio/static/css/main.ef7e54a1.css",
+    "main.js": "/MihneaVNegru/my-portfolio/static/js/main.bc6b6c6e.js",
+    "index.html": "/MihneaVNegru/my-portfolio/index.html",
+    "main.ef7e54a1.css.map": "/MihneaVNegru/my-portfolio/static/css/main.ef7e54a1.css.map",
+    "main.bc6b6c6e.js.map": "/MihneaVNegru/my-portfolio/static/js/main.bc6b6c6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef7e54a1.css",
+    "static/js/main.bc6b6c6e.js"
+  ]
+}
