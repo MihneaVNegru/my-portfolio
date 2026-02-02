@@ -30,31 +30,18 @@ export const skills = [
 
 export const projects = [
   {
-    id: 1,
-    title: "Storingo - Shopping & IoT",
-    description: "Fullstack inventory management and shopping system with IoT integration. Supports 50+ concurrent users and real-time motor control for item retrieval. Reduced manual order processing by 25%.",
-    tags: ["React", "Node.js", "IoT", "QR Code"],
-    demoLink: "#",
-    repoLink: "https://github.com/MihneaVNegru",
-    image: "https://via.placeholder.com/400x250?text=Storingo",
-  },
-  {
     id: 2,
     title: "Data Collector",
     description: "Web scraper built in Racket/Python with Beautiful Soup. Extracts 300-500 emails/hour and automates categorization. Processed 20,000+ emails in initial tests.",
     tags: ["Python", "Racket", "Web Scraping", "Automation"],
-    demoLink: "#",
     repoLink: "https://github.com/MihneaVNegru",
-    image: "https://via.placeholder.com/400x250?text=Data+Collector",
   },
   {
     id: 3,
     title: "WPF Multi-Agent Maze Solver",
     description: "Cooperative multi-agent system simulation in C#/.NET. Agents communicate to escape randomly generated mazes using distributed decision-making.",
     tags: ["C#", ".NET", "WPF", "AI"],
-    demoLink: "#",
     repoLink: "https://github.com/MihneaVNegru",
-    image: "https://via.placeholder.com/400x250?text=Maze+Solver",
   },
 ];
 
