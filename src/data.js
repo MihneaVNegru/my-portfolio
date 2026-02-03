@@ -32,8 +32,8 @@ export const projects = [
   {
     id: 2,
     title: "Data Collector",
-    description: "Web scraper built in Racket/Python with Beautiful Soup. Extracts 300-500 emails/hour and automates categorization. Processed 20,000+ emails in initial tests.",
-    tags: ["Python", "Racket", "Web Scraping", "Automation"],
+    description: "Web scraper built with Python/FastAPI using Beautiful Soup and Playwright. Extracts PII data (emails, phones) from static and SPA sites. Features bulk management, email verification, and CRM CSV export.",
+    tags: ["Python", "FastAPI", "Playwright", "Web Scraping", "Automation", "Pandas"],
     repoLink: "https://github.com/MihneaVNegru",
   },
   {
