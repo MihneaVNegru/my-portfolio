@@ -19,9 +19,20 @@ const Contact = () => {
     e.preventDefault();
     setStatus('submitting');
 
-    // TODO: Replace with your actual Formspree ID
-    // Sign up at https://formspree.io/ to get a free ID
-    const FORMSPREE_ID = "YOUR_FORM_ID";
+    // Use environment variable for Formspree ID
+    const FORMSPREE_ID = process.env.REACT_APP_FORMSPREE_ID;
+
+    // Fallback to mailto if no ID is configured
+    if (!FORMSPREE_ID) {
+      // Construct mailto link
+      const subject = `Portfolio Contact from ${formData.name}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+      window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+      return;
+    }
 
     try {
       const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
