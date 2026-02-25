@@ -57,25 +57,39 @@ export const experience = [
     year: "Apr 2025 – Present",
     role: "Software Engineer (Cloud & AI)",
     company: "Amplified Software",
-    description: "Architected an event-driven execution runtime using AWS Lambda and SQS to decouple LLM tasks with 99.9% reliability. Engineered a high-performance perception engine using Python/FastAPI and Pydantic with DynamoDB for session state. Orchestrated stateful workflows on AWS ECS with Node.js/TypeScript and Redis/BullMQ. Built a centralized LLM gateway with CloudWatch monitoring, reducing MTTR for production failures by 40%."
+    bullets: [
+      "AI Agent Orchestration: Architected an event-driven execution runtime using AWS Lambda and SQS to decouple LLM tasks; implemented custom retry logic and error handling to ensure 99.9% reliability of agent workflows.",
+      "High-Throughput APIs (FastAPI): Engineered a high-performance perception engine using Python/FastAPI and Pydantic; utilized DynamoDB for optimized storage of transient session state and metadata.",
+      "Workflow Automation: Orchestrated stateful workflows on AWS ECS using Node.js/TypeScript and Redis/BullMQ, managing distributed task processing for complex enterprise requirements.",
+      "Observability & Governance: Developed a centralized LLM gateway with real-time CloudWatch monitoring and automated alerting, reducing MTTR for production API failures by over 40%."
+    ]
   },
   {
     year: "Feb 2025 – Apr 2025",
     role: "Software Engineer",
     company: "Binary Tint",
-    description: "Engineered Python/Flask automation services for large-scale data processing. Designed RESTful APIs for AI-driven classification tools handling high-volume communication records. Optimized data ingestion pipelines using DynamoDB, ensuring schema validation and strict data integrity."
+    bullets: [
+      "Engineered Python/Flask automation services for large-scale data processing; designed RESTful APIs for AI-driven classification tools handling high-volume communication records.",
+      "Optimized data ingestion pipelines using DynamoDB for persistence, ensuring schema validation and strict data integrity during rapid scaling phases."
+    ]
   },
   {
     year: "Sep 2023 – Feb 2025",
     role: "Software Engineer",
     company: "Goya-Systec",
-    description: "Leveraged Python for rapid prototyping of IoT modules and developed C-based firmware for hardware-to-cloud communication. Modernized legacy components into a Dockerized microservices model with fullstack dashboards built in React.js and Node.js."
+    bullets: [
+      "Leveraged Python for rapid prototyping of IoT modules and developed C-based firmware for hardware-to-cloud communication.",
+      "Modernized legacy components into a Dockerized microservices model, building fullstack dashboards with React.js and Node.js."
+    ]
   },
   {
     year: "Jun 2022 – Oct 2022",
     role: "Junior Programmer (Java)",
     company: "camLine",
-    description: "Developed Java Enterprise components for Manufacturing Execution Systems (MES), focusing on OOD and backend persistence. Optimized SQL database performance and integrated Jenkins CI/CD to accelerate release cycles."
+    bullets: [
+      "Developed Java Enterprise components for Manufacturing Execution Systems (MES), focusing on OOD and backend persistence.",
+      "Optimized SQL database performance and integrated Jenkins CI/CD to accelerate release cycles."
+    ]
   }
 ];
 

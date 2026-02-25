@@ -46,9 +46,11 @@ const About = () => {
                 <h3 className="text-xl font-bold text-white mb-1">
                   {exp.role} <span className="text-gray-500">at</span> {exp.company}
                 </h3>
-                <p className="text-gray-400">
-                  {exp.description}
-                </p>
+                <ul className="list-disc list-outside ml-4 space-y-1 text-gray-400">
+                  {exp.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
