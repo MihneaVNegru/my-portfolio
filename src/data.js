@@ -1,39 +1,46 @@
 import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaJava, FaDocker, FaAws } from 'react-icons/fa';
 import { SiRedis, SiCplusplus, SiPostgresql, SiKubernetes } from 'react-icons/si';
-import { TbBrandCSharp } from 'react-icons/tb';
 
 export const personalInfo = {
   name: "Mihnea Negru",
-  title: "Software Engineer",
+  title: "Backend Engineer | AI Infrastructure & Agent Orchestration",
   email: "mihnea.vladut.negru@gmail.com",
-  summary: "Software Engineer specialized in fullstack development and cloud-native solutions. Experienced in designing and implementing complex web and mobile applications, integrating frontend, backend, and IoT components. Skilled in Node.js, React, Kotlin, Python, and Docker-based deployments, with proven ability to optimize performance, improve reliability, and deliver end-to-end solutions that meet user and business requirements.",
-  bio: "Software Engineer specialized in fullstack development and cloud-native solutions. Experienced in designing and implementing complex web and mobile applications, integrating frontend, backend, and IoT components.",
+  summary: "Software Engineer specializing in Serverless Architectures and AI-Agent Infrastructure. Expert in building high-concurrency backend services using Python (FastAPI), AWS Lambda, and SQS. Proven track record in orchestrating complex, event-driven AI workflows and optimizing production systems with NoSQL/DynamoDB and robust observability.",
+  bio: "Software Engineer specializing in Serverless Architectures and AI-Agent Infrastructure. Expert in building high-concurrency backend services using Python (FastAPI), AWS Lambda, and SQS.",
   phone: "+40 741 774 273",
+  location: "Iași, Romania",
   github: "https://github.com/MihneaVNegru",
-  linkedin: "https://linkedin.com/in/yourprofile", // User didn't provide specific link, keeping placeholder or could remove
+  linkedin: "https://linkedin.com/in/yourprofile",
 };
 
 export const skills = [
-  { name: "React", icon: <FaReact className="text-blue-400" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-  { name: "Python", icon: <FaPython className="text-blue-500" /> },
-  { name: "Java", icon: <FaJava className="text-red-500" /> },
-  { name: "C/C++", icon: <SiCplusplus className="text-blue-700" /> },
-  { name: "C#", icon: <TbBrandCSharp className="text-purple-600" /> },
-  { name: "SQL (Postgres/MySQL)", icon: <SiPostgresql className="text-blue-400" /> },
-  { name: "NoSQL (DynamoDB/Redis)", icon: <SiRedis className="text-red-600" /> },
+  { name: "Python / FastAPI", icon: <FaPython className="text-blue-500" /> },
+  { name: "AWS Lambda & SQS", icon: <FaAws className="text-orange-500" /> },
+  { name: "Node.js / TypeScript", icon: <FaNodeJs className="text-green-500" /> },
+  { name: "DynamoDB / NoSQL", icon: <SiRedis className="text-red-600" /> },
   { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
   { name: "Kubernetes", icon: <SiKubernetes className="text-blue-600" /> },
-  { name: "AWS", icon: <FaAws className="text-orange-500" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+  { name: "Redis / BullMQ", icon: <SiRedis className="text-red-500" /> },
+  { name: "React.js", icon: <FaReact className="text-blue-400" /> },
+  { name: "Java", icon: <FaJava className="text-red-500" /> },
+  { name: "C/C++", icon: <SiCplusplus className="text-blue-700" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
 ];
 
 export const projects = [
   {
+    id: 1,
+    title: "Storingo – IoT Shopping & Inventory Platform",
+    description: "Fullstack system for automated item retrieval integrating hardware-level motor control with a real-time Node.js backend via QR code triggers.",
+    tags: ["React.js", "Node.js", "IoT", "Hardware Integration"],
+    repoLink: "https://github.com/MihneaVNegru",
+  },
+  {
     id: 2,
-    title: "Data Collector",
-    description: "Web scraper built with Python/FastAPI using Beautiful Soup and Playwright. Extracts PII data (emails, phones) from static and SPA sites. Features bulk management, email verification, and CRM CSV export.",
-    tags: ["Python", "FastAPI", "Playwright", "Web Scraping", "Automation", "Pandas"],
+    title: "GDPR-Aware Data Pipeline",
+    description: "Python crawler with a compliance engine to detect PII and implement automated data-masking to ensure GDPR-compliant storage.",
+    tags: ["Python", "Data Engineering", "GDPR", "Automation"],
     repoLink: "https://github.com/MihneaVNegru",
   },
   {
@@ -48,27 +55,27 @@ export const projects = [
 export const experience = [
   {
     year: "Apr 2025 – Present",
-    role: "Software Engineer (Fullstack)",
+    role: "Software Engineer (Cloud & AI)",
     company: "Amplified Software",
-    description: "Implemented client-facing app features for 100 DAU. Engineered Redis/BullMQ microservices (1k tasks/day) and managed AWS ECS deployments."
+    description: "Architected an event-driven execution runtime using AWS Lambda and SQS to decouple LLM tasks with 99.9% reliability. Engineered a high-performance perception engine using Python/FastAPI and Pydantic with DynamoDB for session state. Orchestrated stateful workflows on AWS ECS with Node.js/TypeScript and Redis/BullMQ. Built a centralized LLM gateway with CloudWatch monitoring, reducing MTTR for production failures by 40%."
   },
   {
     year: "Feb 2025 – Apr 2025",
     role: "Software Engineer",
     company: "Binary Tint",
-    description: "Created Python/Flask AI services processing 200 daily interactions. Managed DynamoDB/PostgreSQL records with 99% uptime."
+    description: "Engineered Python/Flask automation services for large-scale data processing. Designed RESTful APIs for AI-driven classification tools handling high-volume communication records. Optimized data ingestion pipelines using DynamoDB, ensuring schema validation and strict data integrity."
   },
   {
     year: "Sep 2023 – Feb 2025",
     role: "Software Engineer",
     company: "Goya-Systec",
-    description: "Engineered Vue/React/Node web apps (15% efficiency boost). Crafted C-based firmware and managed Docker/Git workflows."
+    description: "Leveraged Python for rapid prototyping of IoT modules and developed C-based firmware for hardware-to-cloud communication. Modernized legacy components into a Dockerized microservices model with fullstack dashboards built in React.js and Node.js."
   },
   {
     year: "Jun 2022 – Oct 2022",
-    role: "Junior Programmer",
+    role: "Junior Programmer (Java)",
     company: "camLine",
-    description: "Java Backend development with MySQL. Automated Jenkins/Git CI/CD pipelines improving reliability by 20%."
+    description: "Developed Java Enterprise components for Manufacturing Execution Systems (MES), focusing on OOD and backend persistence. Optimized SQL database performance and integrated Jenkins CI/CD to accelerate release cycles."
   }
 ];
 
@@ -76,13 +83,14 @@ export const education = [
   {
     period: "2023 – 2025",
     degree: "Master in Engineering - Distributed Systems and Web Technologies",
-    school: "Technical University Gheorghe Asachi Iasi",
-    location: "Iasi, Romania"
+    school: "Technical University Gheorghe Asachi Iași",
+    note: "Thesis in Progress: High-Performance Distributed Computing",
+    location: "Iași, Romania"
   },
   {
     period: "2019 – 2023",
     degree: "Bachelor in Engineering - Computer Engineering",
-    school: "Technical University Gheorghe Asachi Iasi",
-    location: "Iasi, Romania"
+    school: "Technical University Gheorghe Asachi Iași",
+    location: "Iași, Romania"
   }
 ];
