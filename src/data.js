@@ -1,5 +1,5 @@
-import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaJava, FaDocker, FaAws, FaJenkins } from 'react-icons/fa';
-import { SiRedis, SiCplusplus, SiPostgresql, SiKubernetes, SiFastapi, SiFlask, SiAmazonaws, SiAmazondynamodb } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaPython, FaJava, FaDocker, FaAws, FaJenkins } from 'react-icons/fa';
+import { SiRedis, SiCplusplus, SiPostgresql, SiKubernetes, SiFastapi, SiFlask, SiAmazondynamodb } from 'react-icons/si';
 
 export const personalInfo = {
   name: "Mihnea Negru",
