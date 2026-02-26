@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { personalInfo } from '../data';
-import { FaGithub, FaFileDownload } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 const Hero = () => {
     return (
@@ -55,14 +55,6 @@ const Hero = () => {
                     >
                         <FaGithub className="text-xl" />
                         View System Architectures
-                    </a>
-                    <a
-                        href="/cv.pdf"
-                        download
-                        className="flex items-center gap-3 px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl transition-all hover:scale-105 backdrop-blur-md border border-white/10"
-                    >
-                        <FaFileDownload className="text-xl text-blue-400" />
-                        Download Technical CV
                     </a>
                 </motion.div>
             </div>

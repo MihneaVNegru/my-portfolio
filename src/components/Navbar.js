@@ -44,14 +44,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <a
-                href="/cv.pdf"
-                download
-                className="ml-4 px-4 py-2 bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 border border-blue-500/20 rounded-lg text-sm font-medium transition-all"
-              >
-                Resume
-              </a>
-
             </div>
           </div>
 
