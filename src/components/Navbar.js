@@ -37,13 +37,21 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className={`${location.pathname === link.path
-                      ? 'text-blue-400'
-                      : 'text-gray-300 hover:text-white'
+                    ? 'text-blue-400'
+                    : 'text-gray-300 hover:text-white'
                     } px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200`}
                 >
                   {link.name}
                 </Link>
               ))}
+              <a
+                href="/cv.pdf"
+                download
+                className="ml-4 px-4 py-2 bg-blue-600/10 hover:bg-blue-600/20 text-blue-400 border border-blue-500/20 rounded-lg text-sm font-medium transition-all"
+              >
+                Resume
+              </a>
+
             </div>
           </div>
 
@@ -74,8 +82,8 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   className={`${location.pathname === link.path
-                      ? 'bg-gray-800 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    ? 'bg-gray-800 text-white'
+                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
                     } block px-3 py-2 rounded-md text-base font-medium`}
                 >
                   {link.name}
