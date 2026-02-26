@@ -56,20 +56,6 @@ export const projects = [
   },
   {
     id: 2,
-    title: "AI Task Orchestrator",
-    description: "Architected an event-driven system using AWS Lambda and SQS to decouple AI tasks from the API, ensuring horizontal scaling.",
-    tags: ["AWS Lambda", "SQS", "Event-Driven", "AI Orchestration"],
-    repoLink: "https://github.com/MihneaVNegru",
-  },
-  {
-    id: 3,
-    title: "High-Throughput AI Engine (Amie)",
-    description: "Engineered a perception engine in Python with DynamoDB optimization for session metadata and transient state.",
-    tags: ["Python", "DynamoDB", "AI Engine", "Performance"],
-    repoLink: "https://github.com/MihneaVNegru",
-  },
-  {
-    id: 4,
     title: "GDPR Data Pipeline",
     description: "Developed a Python-based compliance engine to detect PII and implement automated data-masking.",
     tags: ["Python", "Data Pipeline", "GDPR", "Privacy"],
