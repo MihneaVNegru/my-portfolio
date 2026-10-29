@@ -29,7 +29,8 @@ const Contact = () => {
       const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
       window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-      setStatus('success');
+      // The message is only drafted in the visitor's email app, not sent yet.
+      setStatus('mailto');
       setFormData({ name: '', email: '', message: '' });
       return;
     }
@@ -78,7 +79,9 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Mail me at</p>
-                  <p className="font-medium">{personalInfo.email}</p>
+                  <a href={`mailto:${personalInfo.email}`} className="font-medium hover:text-white transition-colors">
+                    {personalInfo.email}
+                  </a>
                 </div>
               </div>
 
@@ -88,7 +91,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Location</p>
-                  <p className="font-medium">Romania</p>
+                  <p className="font-medium">{personalInfo.location}</p>
                 </div>
               </div>
             </div>
@@ -96,13 +99,27 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="glass-card p-8 rounded-xl">
-            {status === 'success' ? (
-              <div className="text-center py-12">
+            {status === 'success' || status === 'mailto' ? (
+              <div className="text-center py-12" role="status">
                 <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaPaperPlane size={24} />
+                  <FaPaperPlane size={24} aria-hidden="true" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-400">Thanks for reaching out. I'll get back to you soon.</p>
+                {status === 'success' ? (
+                  <>
+                    <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                    <p className="text-gray-400">Thanks for reaching out. I'll get back to you soon.</p>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="text-2xl font-bold text-white mb-2">Almost there</h3>
+                    <p className="text-gray-400">
+                      Your email app should now show a draft. Press send there to deliver it, or write to{' '}
+                      <a href={`mailto:${personalInfo.email}`} className="text-blue-400 hover:text-blue-300">
+                        {personalInfo.email}
+                      </a>.
+                    </p>
+                  </>
+                )}
                 <button
                   onClick={() => setStatus('')}
                   className="mt-6 text-blue-400 hover:text-blue-300 font-medium"
@@ -167,8 +184,8 @@ const Contact = () => {
                 </button>
 
                 {status === 'error' && (
-                  <p className="text-red-400 text-sm text-center mt-4">
-                    Oops! Something went wrong. Please check your config or try again.
+                  <p className="text-red-400 text-sm text-center mt-4" role="alert">
+                    Something went wrong sending your message. Please try again or email {personalInfo.email} directly.
                   </p>
                 )}
               </form>

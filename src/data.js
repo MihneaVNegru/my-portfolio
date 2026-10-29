@@ -7,10 +7,11 @@ export const personalInfo = {
   email: "mihnea.vladut.negru@gmail.com",
   summary: "Performance-driven Software Engineer and Distributed Systems Master's candidate. I architect complex, fullstack solutions by bridging high-throughput AI perception engines with scalable AWS serverless infrastructure. Specialist in Python (FastAPI), Node.js, and Event-Driven Orchestration.",
   bio: "Performance-driven Software Engineer and Distributed Systems Master's candidate. I architect complex, fullstack solutions by bridging high-throughput AI perception engines with scalable AWS serverless infrastructure. Specialist in Python (FastAPI), Node.js, and Event-Driven Orchestration.",
-  phone: "+40 741 774 273",
   location: "Iași, Romania",
   github: "https://github.com/MihneaVNegru",
-  linkedin: "https://linkedin.com/in/yourprofile",
+  // Add your real LinkedIn URL here (e.g. "https://www.linkedin.com/in/<handle>").
+  // While empty, the LinkedIn icon is hidden in the footer.
+  linkedin: "",
 };
 
 export const skillGroups = [

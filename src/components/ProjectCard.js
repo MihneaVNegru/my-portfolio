@@ -12,14 +12,14 @@ const ProjectCard = ({ project, index }) => {
         >
             {project.featured && (
                 <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-widest z-10 flex items-center gap-1">
-                    <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping" />
+                    <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping motion-reduce:animate-none" />
                     Featured Architecture
                 </div>
             )}
 
             <div className="p-8 flex flex-col flex-grow relative">
                 {/* Tech Background Icon */}
-                <div className="absolute top-4 left-4 opacity-[0.03] text-6xl group-hover:opacity-[0.08] transition-opacity duration-500">
+                <div aria-hidden="true" className="absolute top-4 left-4 opacity-[0.03] text-6xl group-hover:opacity-[0.08] transition-opacity duration-500">
                     <FaTerminal />
                 </div>
 
@@ -42,8 +42,8 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 <div className="pt-6 border-t border-white/5 flex justify-between items-center group/footer">
-                    <span className="text-xs font-mono text-blue-500/70 group-hover:text-blue-400 transition-colors cursor-pointer">
-                        SYSTEM_SPECS.DETAILS
+                    <span className="text-xs font-mono text-blue-400/80 group-hover:text-blue-400 transition-colors">
+                        View details
                     </span>
                     <a
                         href={project.repoLink}
@@ -52,7 +52,7 @@ const ProjectCard = ({ project, index }) => {
                         onClick={(e) => e.stopPropagation()}
                         className="flex items-center gap-2 text-xs font-mono text-gray-500 hover:text-white transition-all z-10 bg-white/5 px-3 py-1.5 rounded-lg border border-transparent hover:border-white/10"
                     >
-                        <FaGithub /> git_clone
+                        <FaGithub aria-hidden="true" /> Source
                     </a>
                 </div>
             </div>

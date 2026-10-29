@@ -16,19 +16,22 @@ const Footer = () => {
                         href={personalInfo.github}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="GitHub profile"
                         className="text-gray-400 hover:text-white transition-colors"
                     >
-                        <FaGithub size={20} />
+                        <FaGithub size={20} aria-hidden="true" />
                     </a>
-                    <a
-                        href={personalInfo.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-blue-500 transition-colors"
-                    >
-                        <FaLinkedin size={20} />
-                    </a>
-                    {/* Add more social links if available in data.js */}
+                    {personalInfo.linkedin && (
+                        <a
+                            href={personalInfo.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn profile"
+                            className="text-gray-400 hover:text-blue-500 transition-colors"
+                        >
+                            <FaLinkedin size={20} aria-hidden="true" />
+                        </a>
+                    )}
                 </div>
             </div>
         </footer>

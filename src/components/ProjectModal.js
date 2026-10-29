@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaTimes } from 'react-icons/fa';
 
 const ProjectModal = ({ project, onClose }) => {
+    const closeRef = useRef(null);
+
+    // Move focus into the dialog, close on Escape, and restore focus on exit.
+    useEffect(() => {
+        if (!project) return undefined;
+        const previouslyFocused = document.activeElement;
+        closeRef.current?.focus();
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') onClose();
+        };
+        document.addEventListener('keydown', onKeyDown);
+        return () => {
+            document.removeEventListener('keydown', onKeyDown);
+            previouslyFocused?.focus?.();
+        };
+    }, [project, onClose]);
+
     if (!project) return null;
 
     return (
@@ -19,18 +36,23 @@ const ProjectModal = ({ project, onClose }) => {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.9, opacity: 0 }}
                     onClick={(e) => e.stopPropagation()}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="project-modal-title"
                     className="bg-gray-900 border border-white/10 rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl relative"
                 >
                     {/* Close Button */}
                     <button
+                        ref={closeRef}
                         onClick={onClose}
-                        className="absolute top-4 right-4 p-2 rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors z-10"
+                        aria-label="Close project details"
+                        className="absolute top-4 right-4 p-2 rounded-full bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors z-10 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                     >
-                        <FaTimes size={16} />
+                        <FaTimes size={16} aria-hidden="true" />
                     </button>
 
                     <div className="p-8">
-                        <h2 className="text-3xl font-bold text-white mb-4 pr-10">
+                        <h2 id="project-modal-title" className="text-3xl font-bold text-white mb-4 pr-10">
                             {project.title}
                         </h2>
 

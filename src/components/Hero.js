@@ -5,12 +5,11 @@ import { FaGithub } from 'react-icons/fa';
 
 const Hero = () => {
     return (
-        <section className="h-[calc(100vh-64px)] flex items-center justify-center relative overflow-hidden">
+        <section className="min-h-[calc(100vh-64px)] py-16 flex items-center justify-center relative overflow-hidden">
             {/* Background Gradients & Effects */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[100px] animate-pulse" />
-                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/10 rounded-full blur-[100px] animate-pulse delay-1000" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+                <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/20 rounded-full blur-[100px] animate-pulse motion-reduce:animate-none" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-600/10 rounded-full blur-[100px] animate-pulse motion-reduce:animate-none delay-1000" />
             </div>
 
             <div className="text-center px-4 max-w-5xl mx-auto">
@@ -19,9 +18,9 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="text-sm md:text-base text-blue-400 font-mono tracking-widest uppercase mb-4 px-4 py-1 border border-blue-400/30 rounded-full inline-block backdrop-blur-sm">
+                    <p className="text-sm md:text-base text-blue-400 font-mono tracking-widest uppercase mb-4 px-4 py-1 border border-blue-400/30 rounded-full inline-block backdrop-blur-sm">
                         Systems Architect // Fullstack Engineer
-                    </h2>
+                    </p>
                     <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight text-white">
                         {personalInfo.name}
                     </h1>
@@ -53,8 +52,8 @@ const Hero = () => {
                         rel="noopener noreferrer"
                         className="group flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:scale-105 shadow-[0_0_20px_rgba(37,99,235,0.3)]"
                     >
-                        <FaGithub className="text-xl" />
-                        View System Architectures
+                        <FaGithub className="text-xl" aria-hidden="true" />
+                        View my GitHub
                     </a>
                 </motion.div>
             </div>
