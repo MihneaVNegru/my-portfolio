@@ -2,7 +2,10 @@ import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
-import { projects } from '../data';
+import { BriefingDiagram, NexusDiagram } from '../components/Diagrams';
+import { projects, caseStudies } from '../data';
+
+const diagrams = { briefing: BriefingDiagram, nexus: NexusDiagram };
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -44,6 +47,45 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        {/* Architecture notes: one diagram per system */}
+        <section aria-labelledby="architecture-heading" className="mt-24">
+          <div className="mb-12">
+            <p className="text-sm font-mono text-blue-400 mb-3">Architecture</p>
+            <h2 id="architecture-heading" className="text-3xl font-semibold tracking-tight text-white">
+              How these systems fit together
+            </h2>
+          </div>
+
+          <div className="space-y-16">
+            {caseStudies.map((study) => {
+              const Diagram = diagrams[study.diagram];
+              return (
+                <article key={study.id} className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                  <div className="lg:col-span-2">
+                    <p className="text-xs font-mono uppercase tracking-wider text-gray-500 mb-2">{study.kicker}</p>
+                    <h3 className="text-2xl font-semibold text-white mb-4">{study.title}</h3>
+                    <p className="text-gray-400 mb-4 leading-relaxed">{study.summary}</p>
+                    <ul className="list-disc ml-5 space-y-2 text-sm text-gray-400 leading-relaxed">
+                      {study.points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div
+                    className="lg:col-span-3 glass-card rounded-xl p-4 overflow-x-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                    tabIndex={0}
+                    role="region"
+                    aria-label={`${study.title} diagram`}
+                  >
+                    <Diagram />
+                    <p className="text-xs text-gray-500 mt-3">{study.caption}</p>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
       </div>
 
       <AnimatePresence>

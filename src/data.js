@@ -124,6 +124,38 @@ export const projects = [
   },
 ];
 
+// Case studies shown on the Projects page. Everything here comes from the CV.
+export const caseStudies = [
+  {
+    id: "briefing",
+    diagram: "briefing",
+    kicker: "Work · Amplified Software",
+    title: "AI morning briefing backend",
+    summary: "Backend infrastructure for an AI-powered personal assistant that turns news, emails, Slack messages and other user information into a personalized morning briefing.",
+    points: [
+      "Event-driven workflows for RSS ingestion, article clustering, story generation and per-user personalization.",
+      "Asynchronous, stateful services in Node.js/TypeScript with NestJS and Redis/BullMQ on AWS ECS, coordinating multi-stage processing with retry and failure handling.",
+      "ElevenLabs text-to-speech integration, with processing to keep the generated narration synchronized with the briefing text.",
+      "IAM, Keycloak/OAuth2 and CloudWatch for security and observability, contributing to a 40% reduction in mean time to recovery."
+    ],
+    caption: "Simplified overview of the processing stages; internal details omitted."
+  },
+  {
+    id: "nexus",
+    diagram: "nexus",
+    kicker: "Personal project",
+    title: "nexus-rpc",
+    summary: "A polyglot binary RPC protocol for microservices and AI workloads, with mTLS that doesn't require a service-mesh sidecar.",
+    points: [
+      "Multiplexed streams over a fixed 44-byte frame.",
+      "Capability-based authentication with HMAC tickets, payloads encrypted with ChaCha20-Poly1305 or AES-GCM, and mTLS.",
+      "A schema compiler generates service stubs for Python, Go and TypeScript.",
+      "Supports W3C trace IDs and raw float32 embedding transport."
+    ],
+    caption: "Simplified view: build-time stub generation and the runtime channel between two services."
+  }
+];
+
 export const experience = [
   {
     year: "Apr 2025 – Present",
