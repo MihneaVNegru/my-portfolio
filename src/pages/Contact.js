@@ -86,7 +86,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-center space-x-4 text-gray-300">
-                <div className="w-12 h-12 glass-card rounded-full flex items-center justify-center text-purple-400">
+                <div className="w-12 h-12 glass-card rounded-full flex items-center justify-center text-blue-400">
                   <FaMapMarkerAlt size={20} />
                 </div>
                 <div>
@@ -177,7 +177,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className={`w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-medium py-3 rounded-lg flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.02] ${status === 'submitting' ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-lg flex items-center justify-center space-x-2 transition-colors${status === 'submitting' ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
                   <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
                   <FaPaperPlane size={14} />

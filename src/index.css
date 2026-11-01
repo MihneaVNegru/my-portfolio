@@ -6,16 +6,17 @@
 
 @layer base {
   body {
-    @apply bg-gray-900 text-white font-inter overflow-x-hidden;
+    @apply bg-gray-900 text-white font-inter overflow-x-hidden antialiased;
+  }
+
+  ::selection {
+    @apply bg-blue-500/30 text-white;
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600;
-  }
-  
+  /* Flat surface: no blur or heavy shadow, just a subtle fill and hairline border. */
   .glass-card {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl;
+    @apply bg-white/[0.03] border border-white/10;
   }
 }

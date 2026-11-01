@@ -20,6 +20,22 @@ export const personalInfo = {
   linkedin: "",
 };
 
+// Short proof points shown under the hero. All taken from the CV.
+export const highlights = [
+  {
+    label: "Now",
+    text: "Backend for an AI morning-briefing assistant and a production healthcare platform at Amplified Software.",
+  },
+  {
+    label: "Impact",
+    text: "Contributed to a 40% reduction in mean time to recovery for production failures (IAM, Keycloak/OAuth2, CloudWatch).",
+  },
+  {
+    label: "Side project",
+    text: "nexus-rpc: a polyglot binary RPC protocol with mTLS and generated stubs for Python, Go and TypeScript.",
+  },
+];
+
 export const skillGroups = [
   {
     category: "Languages",
@@ -28,7 +44,7 @@ export const skillGroups = [
       { name: "Python", icon: <FaPython className="text-blue-500" /> },
       { name: "JavaScript, SQL", icon: <FaCode className="text-yellow-400" /> },
       { name: "Java", icon: <FaJava className="text-red-500" /> },
-      { name: "Go", icon: <SiGo className="text-cyan-400" /> },
+      { name: "Go", icon: <SiGo className="text-sky-400" /> },
       { name: "C/C++", icon: <SiCplusplus className="text-blue-700" /> },
     ]
   },
@@ -40,7 +56,7 @@ export const skillGroups = [
       { name: "FastAPI", icon: <SiFastapi className="text-emerald-500" /> },
       { name: "Flask", icon: <SiFlask className="text-gray-400" /> },
       { name: "REST APIs, Microservices", icon: <FaServer className="text-gray-400" /> },
-      { name: "Distributed Systems, Event-Driven Architecture", icon: <FaProjectDiagram className="text-purple-400" /> },
+      { name: "Distributed Systems, Event-Driven Architecture", icon: <FaProjectDiagram className="text-blue-400" /> },
       { name: "RPC, Asynchronous Workflows", icon: <FaNetworkWired className="text-blue-400" /> },
     ]
   },
