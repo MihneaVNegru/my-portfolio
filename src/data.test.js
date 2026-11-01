@@ -8,12 +8,14 @@ describe('portfolio data', () => {
     expect(personalInfo.linkedin || '').not.toMatch(/yourprofile/i);
   });
 
-  test('every project has a title, description, tags and a repo link', () => {
+  test('every project has a title, description and tags; repo links are valid when present', () => {
     projects.forEach((p) => {
       expect(p.title).toBeTruthy();
       expect(p.description).toBeTruthy();
       expect(p.tags.length).toBeGreaterThan(0);
-      expect(p.repoLink).toMatch(/^https:\/\/github\.com\//);
+      if (p.repoLink) {
+        expect(p.repoLink).toMatch(/^https:\/\/github\.com\//);
+      }
     });
   });
 

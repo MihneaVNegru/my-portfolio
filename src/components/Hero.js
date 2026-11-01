@@ -19,7 +19,7 @@ const Hero = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <p className="text-sm md:text-base text-blue-400 font-mono tracking-widest uppercase mb-4 px-4 py-1 border border-blue-400/30 rounded-full inline-block backdrop-blur-sm">
-                        Systems Architect // Fullstack Engineer
+                        Distributed Systems // Cloud // Backend
                     </p>
                     <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight text-white">
                         {personalInfo.name}

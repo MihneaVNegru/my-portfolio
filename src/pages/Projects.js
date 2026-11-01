@@ -19,7 +19,7 @@ const Projects = () => {
         >
           <h1 className="text-4xl font-bold text-white mb-4">Featured Projects</h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A selection of my recent work, featuring web applications, system designs, and more.
+            Personal projects in distributed systems, RPC protocols, data collection and backend tooling.
           </p>
         </motion.div>
 

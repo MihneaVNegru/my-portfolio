@@ -78,6 +78,7 @@ const About = () => {
                   <span className="text-blue-400 font-mono text-sm">{edu.period}</span>
                 </div>
                 <p className="text-lg text-gray-300 font-medium">{edu.degree}</p>
+                {edu.note && <p className="text-gray-400 text-sm mt-1">{edu.note}</p>}
                 <p className="text-gray-500 text-sm mt-1">{edu.location}</p>
               </motion.div>
             ))}

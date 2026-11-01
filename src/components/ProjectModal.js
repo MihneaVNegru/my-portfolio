@@ -71,16 +71,18 @@ const ProjectModal = ({ project, onClose }) => {
                             <p>{project.description}</p>
                         </div>
 
-                        <div className="pt-6 border-t border-white/10 flex justify-end">
-                            <a
-                                href={project.repoLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-                            >
-                                <FaGithub size={20} /> View Source Code
-                            </a>
-                        </div>
+                        {project.repoLink && (
+                            <div className="pt-6 border-t border-white/10 flex justify-end">
+                                <a
+                                    href={project.repoLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                                >
+                                    <FaGithub size={20} aria-hidden="true" /> View Source Code
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </motion.div>
             </motion.div>

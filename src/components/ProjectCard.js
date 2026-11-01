@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
             {project.featured && (
                 <div className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-widest z-10 flex items-center gap-1">
                     <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping motion-reduce:animate-none" />
-                    Featured Architecture
+                    Featured
                 </div>
             )}
 
@@ -45,15 +45,17 @@ const ProjectCard = ({ project, index }) => {
                     <span className="text-xs font-mono text-blue-400/80 group-hover:text-blue-400 transition-colors">
                         View details
                     </span>
-                    <a
-                        href={project.repoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-2 text-xs font-mono text-gray-500 hover:text-white transition-all z-10 bg-white/5 px-3 py-1.5 rounded-lg border border-transparent hover:border-white/10"
-                    >
-                        <FaGithub aria-hidden="true" /> Source
-                    </a>
+                    {project.repoLink && (
+                        <a
+                            href={project.repoLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex items-center gap-2 text-xs font-mono text-gray-500 hover:text-white transition-all z-10 bg-white/5 px-3 py-1.5 rounded-lg border border-transparent hover:border-white/10"
+                        >
+                            <FaGithub aria-hidden="true" /> Source
+                        </a>
+                    )}
                 </div>
             </div>
         </motion.div>
