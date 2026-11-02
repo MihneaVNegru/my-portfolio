@@ -25,7 +25,11 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-white tracking-wider">
+          <Link
+            to="/"
+            aria-label="Mihnea Negru, home"
+            className="text-2xl font-bold text-white tracking-wider rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          >
             MN<span className="text-blue-500">.</span>
           </Link>
 
@@ -36,10 +40,11 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
+                  aria-current={location.pathname === link.path ? 'page' : undefined}
                   className={`${location.pathname === link.path
                     ? 'text-blue-400'
                     : 'text-gray-300 hover:text-white'
-                    } px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200`}
+                    } px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500`}
                 >
                   {link.name}
                 </Link>
@@ -75,10 +80,11 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
+                  aria-current={location.pathname === link.path ? 'page' : undefined}
                   className={`${location.pathname === link.path
                     ? 'bg-gray-800 text-white'
                     : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                    } block px-3 py-2 rounded-md text-base font-medium`}
+                    } block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500`}
                 >
                   {link.name}
                 </Link>

@@ -1,43 +1,41 @@
 # Mihnea Negru - Portfolio
 
-A modern, responsive personal portfolio website built with **React**, **Tailwind CSS**, and **Framer Motion**.
+Personal portfolio site: software engineering work in distributed systems, cloud and backend.
 
-## 🚀 Live Demo
-[https://MihneaVNegru.github.io/my-portfolio/](https://MihneaVNegru.github.io/my-portfolio/)
+Live: https://mihneavnegru.github.io/my-portfolio/
 
-## 🛠 Tech Stack
--   **React** (v18)
--   **Tailwind CSS** - Styling and dark mode
--   **Framer Motion** - Animations and transitions
--   **React Router** (HashRouter) - Client-side routing
--   **GitHub Pages** - Hosting
+## Stack
+- React 18 (Create React App)
+- Tailwind CSS 3
+- Framer Motion (animations; respects the reduced-motion setting)
+- React Router with `HashRouter`, so it works on GitHub Pages without server rewrites
+- Inter, self-hosted as subsetted WOFF files in `src/fonts`
+- GitHub Pages, deployed by GitHub Actions
 
-## ✨ Features
--   **Responsive Design**: optimized for mobile, tablet, and desktop.
--   **Project Modal**: Detailed pop-up view for featured projects.
--   **Dark Theme**: Sleek, modern aesthetic.
--   **Dynamic Content**: All text and data are managed in `src/data.js` for easy updates.
+## Editing content
+All text and data live in `src/data.js`:
 
-## 📦 Installation
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/MihneaVNegru/my-portfolio.git
-    cd my-portfolio
-    ```
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-3.  **Start local server**:
-    ```bash
-    npm start
-    ```
+| Export | What it controls |
+| --- | --- |
+| `personalInfo` | Name, title, intro, location, GitHub and LinkedIn links. The LinkedIn icon is hidden while `linkedin` is empty. |
+| `highlights` | The three proof points under the hero. |
+| `skillGroups` | Skill chips on the home page. `icon` and `detail` are optional. |
+| `projects` | Project cards. `repoLink` is optional; the Source button is hidden without it. |
+| `caseStudies` | Architecture write-ups on the Projects page. `diagram` picks a diagram from `src/components/Diagrams.js`. |
+| `experience`, `education` | The About page. |
 
-## 🚀 Deployment
-To deploy changes to GitHub Pages:
+The link-preview image is `public/og-image.png` (1200x630), and the page title, description and social tags are in `public/index.html`.
+
+## Contact form
+Without configuration the form opens the visitor's email app with a drafted message. To send directly through [Formspree](https://formspree.io), set `REACT_APP_FORMSPREE_ID` at build time (see `.env.example`).
+
+## Development
 ```bash
-npm run deploy
+npm install
+npm start      # dev server
+npm test       # data sanity tests
+npm run build  # production build
 ```
 
----
-© 2026 Mihnea Negru. All rights reserved.
+## Deployment
+Pushing to `main` runs `.github/workflows/deploy.yml`, which installs dependencies, builds the site and publishes it to GitHub Pages. A failed build does not deploy.
