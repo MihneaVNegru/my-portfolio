@@ -18,10 +18,11 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <h1 className="text-4xl font-bold text-white mb-4">Featured Projects</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm font-mono text-blue-400 mb-3">Projects</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white mb-4">Featured projects</h1>
+          <p className="text-gray-400 max-w-2xl">
             Personal projects in distributed systems, RPC protocols, data collection and backend tooling.
           </p>
         </motion.div>

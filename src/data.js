@@ -1,7 +1,4 @@
-import {
-  FaReact, FaNodeJs, FaPython, FaJava, FaDocker, FaAws, FaDatabase, FaServer, FaCode,
-  FaLock, FaShieldAlt, FaNetworkWired, FaProjectDiagram, FaCodeBranch, FaCheckCircle,
-} from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaPython, FaJava, FaDocker, FaAws, FaJs } from 'react-icons/fa';
 import {
   SiRedis, SiCplusplus, SiPostgresql, SiKubernetes, SiFastapi, SiFlask, SiAmazondynamodb,
   SiTypescript, SiGo, SiNestjs, SiNextdotjs, SiSqlite, SiLinux,
@@ -36,13 +33,15 @@ export const highlights = [
   },
 ];
 
+// Brand icons only where a real logo exists; `detail` is shown as muted text after the name.
 export const skillGroups = [
   {
     category: "Languages",
     skills: [
       { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
       { name: "Python", icon: <FaPython className="text-blue-500" /> },
-      { name: "JavaScript, SQL", icon: <FaCode className="text-yellow-400" /> },
+      { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+      { name: "SQL" },
       { name: "Java", icon: <FaJava className="text-red-500" /> },
       { name: "Go", icon: <SiGo className="text-sky-400" /> },
       { name: "C/C++", icon: <SiCplusplus className="text-blue-700" /> },
@@ -52,22 +51,26 @@ export const skillGroups = [
     category: "Backend & Architecture",
     skills: [
       { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-      { name: "NestJS, Express", icon: <SiNestjs className="text-red-500" /> },
+      { name: "NestJS", icon: <SiNestjs className="text-red-500" /> },
+      { name: "Express" },
       { name: "FastAPI", icon: <SiFastapi className="text-emerald-500" /> },
       { name: "Flask", icon: <SiFlask className="text-gray-400" /> },
-      { name: "REST APIs, Microservices", icon: <FaServer className="text-gray-400" /> },
-      { name: "Distributed Systems, Event-Driven Architecture", icon: <FaProjectDiagram className="text-blue-400" /> },
-      { name: "RPC, Asynchronous Workflows", icon: <FaNetworkWired className="text-blue-400" /> },
+      { name: "REST APIs" },
+      { name: "Microservices" },
+      { name: "Distributed systems" },
+      { name: "Event-driven architecture" },
+      { name: "RPC" },
+      { name: "Asynchronous workflows" },
     ]
   },
   {
     category: "Cloud & Infrastructure",
     skills: [
-      { name: "AWS (ECS, Lambda, S3, IAM, CloudWatch)", icon: <FaAws className="text-orange-500" /> },
+      { name: "AWS", detail: "ECS, Lambda, S3, IAM, CloudWatch", icon: <FaAws className="text-orange-500" /> },
       { name: "Docker", icon: <FaDocker className="text-blue-500" /> },
       { name: "Kubernetes", icon: <SiKubernetes className="text-blue-600" /> },
       { name: "Linux", icon: <SiLinux className="text-yellow-400" /> },
-      { name: "CI/CD", icon: <FaCodeBranch className="text-gray-400" /> },
+      { name: "CI/CD" },
     ]
   },
   {
@@ -82,10 +85,11 @@ export const skillGroups = [
   {
     category: "Messaging & Integration",
     skills: [
-      { name: "BullMQ", icon: <FaDatabase className="text-red-400" /> },
-      { name: "NATS", icon: <FaNetworkWired className="text-green-400" /> },
-      { name: "AMQP, MQTT", icon: <FaNetworkWired className="text-orange-400" /> },
-      { name: "IoT / Industrial Integration", icon: <FaServer className="text-gray-400" /> },
+      { name: "BullMQ" },
+      { name: "NATS" },
+      { name: "AMQP" },
+      { name: "MQTT" },
+      { name: "IoT / industrial integration" },
     ]
   },
   {
@@ -93,9 +97,13 @@ export const skillGroups = [
     skills: [
       { name: "React", icon: <FaReact className="text-blue-400" /> },
       { name: "Next.js", icon: <SiNextdotjs className="text-gray-300" /> },
-      { name: "OAuth2, Keycloak, JWT", icon: <FaLock className="text-yellow-500" /> },
-      { name: "mTLS, HMAC", icon: <FaShieldAlt className="text-emerald-500" /> },
-      { name: "pytest, Unit/Integration Testing", icon: <FaCheckCircle className="text-green-500" /> },
+      { name: "OAuth2" },
+      { name: "Keycloak" },
+      { name: "JWT" },
+      { name: "mTLS" },
+      { name: "HMAC" },
+      { name: "pytest" },
+      { name: "Unit & integration testing" },
     ]
   }
 ];

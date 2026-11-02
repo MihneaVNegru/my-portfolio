@@ -67,7 +67,8 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div>
-            <h1 className="text-4xl font-bold text-white mb-6">Let's Connect</h1>
+            <p className="text-sm font-mono text-blue-400 mb-3">Contact</p>
+            <h1 className="text-4xl font-semibold tracking-tight text-white mb-6">Let's connect</h1>
             <p className="text-gray-400 text-lg mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
             </p>

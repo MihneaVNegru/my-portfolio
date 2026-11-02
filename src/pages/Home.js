@@ -40,8 +40,9 @@ const Home = () => {
                       key={skill.name}
                       className="inline-flex items-center gap-2 px-3 py-1.5 text-sm text-gray-300 bg-white/[0.03] border border-white/10 rounded-lg"
                     >
-                      <span aria-hidden="true" className="text-base">{skill.icon}</span>
+                      {skill.icon && <span aria-hidden="true" className="text-base">{skill.icon}</span>}
                       {skill.name}
+                      {skill.detail && <span className="text-gray-500">{skill.detail}</span>}
                     </li>
                   ))}
                 </ul>

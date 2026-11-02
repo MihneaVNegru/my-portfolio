@@ -15,7 +15,8 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h1 className="text-4xl font-bold text-white mb-6">About Me</h1>
+          <p className="text-sm font-mono text-blue-400 mb-3">About</p>
+          <h1 className="text-4xl font-semibold tracking-tight text-white mb-6">Background</h1>
           <div className="glass-card p-8 rounded-xl text-lg text-gray-300 leading-relaxed">
             <p>{personalInfo.summary}</p>
           </div>
@@ -28,7 +29,7 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-white mb-8">Experience</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-white mb-8">Experience</h2>
           <div className="space-y-8">
             {experience.map((exp, index) => (
               <motion.div
@@ -39,7 +40,7 @@ const About = () => {
                 viewport={{ once: true }}
                 className="relative pl-8 border-l-2 border-blue-500/30"
               >
-                <div className="absolute top-0 left-[-9px] w-4 h-4 bg-blue-500 rounded-full shadow-lg shadow-blue-500/50" />
+                <div className="absolute top-1 left-[-9px] w-4 h-4 bg-blue-500 rounded-full ring-4 ring-gray-900" />
                 <span className="text-sm text-blue-400 font-mono mb-1 block">
                   {exp.year}
                 </span>
@@ -62,7 +63,7 @@ const About = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h2 className="text-3xl font-bold text-white mb-8">Education</h2>
+          <h2 className="text-3xl font-semibold tracking-tight text-white mb-8">Education</h2>
           <div className="grid gap-6">
             {education.map((edu, index) => (
               <motion.div
